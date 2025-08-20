@@ -32,7 +32,7 @@ jobs:
       run: dotnet publish EcommerceBackend/EcommerceBackend.API/EcommerceBackend.API.csproj --configuration release --output ./publish
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3 
+      uses: actions/upload-artifact@v4
       with: 
         name: ecommerce-api
         path: ./publish 
