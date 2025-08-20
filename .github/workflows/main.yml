@@ -23,13 +23,13 @@ jobs:
       run: dotnet restore EcommerceBackend/EcommerceBackend.API/EcommerceBackend.API.csproj 
 
     - name: Build
-      run: dotnet build EcommerceBackend/EcommerceBackend.API/EcommerceBackend.API.csproj --configuration release 
+      run: dotnet build EcommerceBackend/EcommerceBackend.Application/EcommerceBackend.Application.csproj --configuration release 
 
     - name: Test 
       run: dotnet test 
 
     - name: Publish 
-      run: dotnet publish EcommerceBackend/EcommerceBackend.API/EcommerceBackend.API.csproj --configuration release --output ./publish
+      run: dotnet publish EcommerceBackend/EcommerceBackend.Application/EcommerceBackend.Application.csproj --configuration release --output ./publish
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
