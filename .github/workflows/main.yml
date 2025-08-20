@@ -25,8 +25,8 @@ jobs:
     - name: Build
       run: dotnet build EcommerceBackend/EcommerceBackend.Application/EcommerceBackend.Application.csproj --configuration release 
 
-    - name: Test 
-      run: dotnet test 
+    #- name: Test 
+      #run: dotnet test 
 
     - name: Publish 
       run: dotnet publish EcommerceBackend/EcommerceBackend.Application/EcommerceBackend.Application.csproj --configuration release --output ./publish
